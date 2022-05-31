@@ -36,8 +36,8 @@
             , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // row 3
             , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row 4
             , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row 5
-            , <&gpio1 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>         // row 6
-            , <&gpio1 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>         // row 7
+            , <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>      // row 6
+            , <&gpio1 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>      // row 7
             ;
     };
 
