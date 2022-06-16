@@ -45,7 +45,7 @@
             label = "Symbols";
 
             bindings = <
-    &trans     &trans       &trans       &trans          &trans           &trans        &trans         &trans         &trans        &trans            &trans        &trans      &trans      &trans
+    &trans     &BT_SEL 0    &BT_SEL 1    &BT_SEL 2       &trans           &trans        &BT_CLR         &trans         &trans        &trans            &trans        &trans      &trans      &trans
     &trans     &kp EXCL     &kp AT       &kp HASH        &kp DLLR         &kp PRCNT     &trans         &trans         &kp CARET     &kp AMPS          &kp ASTRK     &kp UNDER   &kp EQUAL   &trans
     &trans     &kp MINUS    &kp LBKT     &kp LBRC        &kp LPAR         &kp LT        &trans         &trans         &kp GT        &kp RPAR          &kp RBRC      &kp RBKT    &kp PLUS    &trans
     &trans     &kp CAPS     &kp GRAVE    &kp LC(LS(TAB)) &kp LC(LG(LEFT)) &caps_word    &trans         &trans         &trans        &kp LC(LG(RIGHT)) &kp LC(TAB)   &trans      &kp BSLH    &trans
