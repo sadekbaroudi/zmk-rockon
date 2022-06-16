@@ -14,6 +14,48 @@
     continue-list = <UNDERSCORE MINUS>;
 };
 
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_undo {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp LC(Z)>;
+        };
+        combo_q {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp Q>;
+        };
+        combo_semicolon {
+            timeout-ms = <50>;
+            key-positions = <33 34>;
+            bindings = <&kp SEMI>;
+        };
+    };
+};
+
+/ {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+        hs: homerow_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
