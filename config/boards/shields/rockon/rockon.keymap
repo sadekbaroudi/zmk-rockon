@@ -31,9 +31,9 @@
             bindings = <
     &kp EQUAL  &kp N1      &kp N2      &kp N3      &kp N4        &kp N5       &trans               &trans          &kp N6         &kp N7        &kp N8        &kp N9      &kp N0      &kp MINUS
     &kp GRAVE  &kp Q       &kp W       &kp E       &kp R         &kp T        &trans               &trans          &kp Y          &kp U         &kp I         &kp O       &kp P       &kp BSLH
-    &kp LGUI   &kp A       &kp S       &kp D       &kp F         &kp G        &trans               &trans          &kp H          &kp J         &kp K         &kp L       &kp SEMI    &kp SQT
+    &kp LGUI   &kp A       &kp S       &kp D       &kp F         &kp G        &kp ESC              &kp RET         &kp H          &kp J         &kp K         &kp L       &kp SEMI    &kp SQT
     &mt LSHIFT LPAR &kp Z  &kp X       &kp C       &kp V         &kp B        &kp LGUI             &kp TAB         &kp N          &kp M         &kp COMMA     &kp DOT     &kp FSLH    &mt RSHIFT RPAR
-                        &mt LCTL ESC   &kp LALT    &kp ESC       &mo NAV      &kp SPACE            &kp BSPC        &mo SYM        &kp LBKT      &kp RBKT      &kp RET
+                        &mt LCTL ESC   &kp LALT    &mo NAV       &kp LGUI     &kp SPACE            &kp BSPC        &kp TAB        &mo SYM       &kp LBKT      &kp RBKT
             >;
         };
 
