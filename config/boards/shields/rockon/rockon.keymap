@@ -6,8 +6,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define NAV     1
-#define SYM     2
+#define LWR     1
+#define RAS     2
 #define FUNC    3
 
 &caps_word {
@@ -31,26 +31,26 @@
             bindings = <
     &kp EQUAL  &kp N1      &kp N2      &kp N3      &kp N4        &kp N5       &trans               &trans          &kp N6         &kp N7        &kp N8        &kp N9      &kp N0      &kp MINUS
     &kp GRAVE  &kp Q       &kp W       &kp E       &kp R         &kp T        &trans               &trans          &kp Y          &kp U         &kp I         &kp O       &kp P       &kp BSLH
-    &kp LGUI   &kp A       &kp S       &kp D       &kp F         &kp G        &kp ESC              &kp RET         &kp H          &kp J         &kp K         &kp L       &kp SEMI    &kp SQT
-    &mt LSHIFT LPAR &kp Z  &kp X       &kp C       &kp V         &kp B        &kp LGUI             &kp TAB         &kp N          &kp M         &kp COMMA     &kp DOT     &kp FSLH    &mt RSHIFT RPAR
-                        &mt LCTL ESC   &kp LALT    &mo NAV       &kp LGUI     &kp SPACE            &kp BSPC        &kp TAB        &mo SYM       &kp LBKT      &kp RBKT
+    &kp LGUI   &kp A       &kp S       &kp D       &kp F         &kp G        &trans               &trans          &kp H          &kp J         &kp K         &kp L       &kp SEMI    &kp SQT
+    &mt LSHIFT LPAR &kp Z  &kp X       &kp C       &kp V         &kp B        &trans               &trans          &kp N          &kp M         &kp COMMA     &kp DOT     &kp FSLH    &mt RSHIFT RPAR
+                        &mt LCTL ESC   &kp LALT    &mo LWR       &kp LGUI     &mt SPACE LS(LALT)   &mt BSPC LS(LALT(LCTL))        &kp TAB        &mo RAS       &kp RET       &trans
             >;
         };
 
         nav_layer {
-            label = "Navigation";
+            label = "Lower";
             
             bindings = <
     &trans     &trans       &trans       &trans      &trans        &trans      &trans               &trans     &trans        &trans       &trans        &trans      &trans      &trans
     &trans     &kp ESC      &kp PG_UP    &kp UP      &kp PG_DN     &trans      &trans               &trans     &kp ASTRK     &kp N7       &kp N8        &kp N9      &kp MINUS   &trans
     &trans     &kp HOME     &kp LEFT     &kp DOWN    &kp RIGHT     &kp END     &trans               &trans     &kp LEFT      &kp DOWN     &kp UP        &kp RIGHT   &kp PLUS    &trans
-    &trans     &trans       &trans       &trans      &trans        &trans      &trans               &trans     &kp EQUAL     &kp N1       &kp N2        &kp N3      &kp N0      &trans
+    &trans     &trans       &trans       &trans      &trans        &trans      &trans               &trans     &kp LBKT      &kp RBKT     &kp N2        &kp N3      &kp N0      &trans
                             &trans       &trans      &trans        &trans       &kp TAB       &kp BSPC         &kp SPACE     &kp DOT      &trans        &trans
             >;
         };
 
         sym_layer {
-            label = "Symbols";
+            label = "Raise";
 
             bindings = <
     &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &trans           &trans        &bt BT_CLR         &trans         &trans        &trans            &trans        &trans      &trans      &trans
