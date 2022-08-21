@@ -49,11 +49,11 @@
         default_layer {
             label = "Default";
             bindings = <
-    &kp ESC    &kp N1      &kp N2      &kp N3      &kp N4        &kp N5       &kp MINUS            &kp EQUAL       &kp N6         &kp N7        &kp N8        &kp N9      &kp N0      &kp BSPC
-    &kp TAB    &kp Q       &kp W       &kp F       &kp P         &kp B        &kp LBRC             &kp RBRC        &kp J          &kp L         &kp U         &kp Y       &kp SEMI    &kp BSLH
-    &kp LSHIFT &kp A       &kp R       &kp S       &kp T         &kp G        &kp C_VOL_DN         &kp C_VOL_UP    &kp M          &kp N         &kp E         &kp I       &kp O       &kp SQT
-    &kp LCMD   &kp Z       &kp X       &kp C       &kp D         &kp V        &kp C_PREV           &kp C_NEXT      &kp K          &kp H         &kp COMMA     &kp DOT     &kp FSLH    &kp RET
-                           &kp LALT    &kp LG(TAB) &kp C_BRI_DN  &mo RAISE    &kp C_PLAY_PAUSE     &kp K_MUTE      &kp SPACE      &kp C_BRI_UP  &kp LG(V)     &kp LS(LG(N3))
+    &kp ESC    &kp N1      &kp N2      &kp N3      &kp N4        &kp N5       &kp MINUS                                           &kp EQUAL       &kp N6         &kp N7        &kp N8        &kp N9      &kp N0      &kp BSPC
+    &kp TAB    &kp Q       &kp W       &kp F       &kp P         &kp B        &kp LBRC                                            &kp RBRC        &kp J          &kp L         &kp U         &kp Y       &kp SEMI    &kp BSLH
+    &kp LSHIFT &kp A       &kp R       &kp S       &kp T         &kp G        &kp C_VOL_DN                                        &kp C_VOL_UP    &kp M          &kp N         &kp E         &kp I       &kp O       &kp SQT
+    &kp LCMD   &kp Z       &kp X       &kp C       &kp D         &kp V        &kp C_PREV                                          &kp C_NEXT      &kp K          &kp H         &kp COMMA     &kp DOT     &kp FSLH    &kp RET
+                           &kp LALT    &kp LG(TAB) &kp C_BRI_DN  &mo RAISE    &kp C_PLAY_PAUSE     &trans          &trans         &kp K_MUTE      &kp SPACE      &kp C_BRI_UP  &kp LG(V)     &kp LS(LG(N3))
             >;
         };
 
@@ -61,11 +61,11 @@
             label = "Raise";
             
             bindings = <
-    &kp GRAVE  &trans       &trans       &trans      &trans        &trans      &trans               &trans     &trans        &trans       &trans        &trans       &trans        &bootloader
-    &trans     &trans       &kp PG_UP    &kp UP      &kp PG_DN     &trans      &trans               &trans     &trans        &trans       &trans        &trans       &trans        &trans
-    &trans     &kp HOME     &kp LEFT     &kp DOWN    &kp RIGHT     &kp END     &trans               &trans     &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3  &trans
-    &trans     &trans       &trans       &trans      &trans        &trans      &trans               &trans     &trans        &trans       &trans        &trans       &trans        &trans
-                            &trans       &trans      &trans        &trans      &trans               &trans     &trans        &trans       &trans        &trans
+    &kp GRAVE  &trans       &trans       &trans      &trans        &trans      &trans                                        &trans     &trans        &trans       &trans        &trans       &trans        &bootloader
+    &trans     &trans       &kp PG_UP    &kp UP      &kp PG_DN     &trans      &trans                                        &trans     &trans        &trans       &trans        &trans       &trans        &trans
+    &trans     &kp HOME     &kp LEFT     &kp DOWN    &kp RIGHT     &kp END     &trans                                        &trans     &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3  &trans
+    &trans     &trans       &trans       &trans      &trans        &trans      &trans                                        &trans     &trans        &trans       &trans        &trans       &trans        &trans
+                            &trans       &trans      &trans        &trans      &trans         &trans          &trans         &trans     &trans        &trans       &trans        &trans
             >;
         };
     };
