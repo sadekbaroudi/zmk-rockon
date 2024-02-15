@@ -5,5 +5,12 @@ This is the firmware for the rockon:
 
 Note that this is pre-configured without an OLED, though the keyboard does support an OLED. You will need to adjust the firmware to support.
 
-For an example of firmware that supports an OLED, see:
-* https://github.com/NCKiser/zmk-ffkb
+For the `v1_cirque` branch, here is the command to build:
+`west build --pristine -b nice_nano_v2 -- -DSHIELD=rockon -DZMK_CONFIG=/home/sadek/zmk-rockon/config -DZMK_EXTRA_MODULES="/home/sadek/cirque-input-module;/home/sadek/zmk-rockon"`  
+
+You should be running this from the zmk/app directory from the following repo and branch:
+* `https://github.com/petejohanson/zmk/tree/feat/pointers-move-scroll`  
+
+Please note that you should have cloned:
+* `https://github.com/petejohanson/cirque-input-module`
+* `https://github.com/sadekbaroudi/zmk-rockon`  

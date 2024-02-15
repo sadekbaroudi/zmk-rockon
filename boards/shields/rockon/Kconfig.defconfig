@@ -6,6 +6,4 @@ if SHIELD_ROCKON
 config ZMK_KEYBOARD_NAME
     default "rockon"
 
-CONFIG_BUILD_OUTPUT_UF2=y
-
 endif

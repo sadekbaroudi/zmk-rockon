@@ -10,8 +10,7 @@
 #define SYM     2
 #define FUNC    3
 #define MEDIA   4
-#define MOUSE   5
-#define WINNAV  6
+#define WINNAV  5
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
@@ -22,18 +21,8 @@
         compatible = "zmk,combos";
         combo_undo {
             timeout-ms = <50>;
-            key-positions = <26 27>;
+            key-positions = <44 45>;
             bindings = <&kp LC(Z)>;
-        };
-        combo_q {
-            timeout-ms = <50>;
-            key-positions = <27 28>;
-            bindings = <&kp Q>;
-        };
-        combo_semicolon {
-            timeout-ms = <50>;
-            key-positions = <33 34>;
-            bindings = <&kp SEMI>;
         };
     };
 };
@@ -46,12 +35,12 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick_tap_ms = <0>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
         hs: homerow_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "HOMEROW_SHIFT";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick_tap_ms = <0>;
@@ -59,6 +48,7 @@
             bindings = <&kp>, <&kp>;
         };
     };
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -103,7 +93,7 @@
 
             bindings = <
     &trans     &trans       &trans        &trans       &trans        &trans        &trans             &trans     &trans           &trans       &trans        &trans      &trans      &trans
-    &trans     &trans       &kp LS(PG_UP) &kp LS(UP)   &kp LS(PG_DN) &trans        &trans             &trans     &kp C_PLAY_PAUSE &kp F7       &kp F8        &kp F9      &kp F10     &trans
+    &trans     &bootloader  &kp LS(PG_UP) &kp LS(UP)   &kp LS(PG_DN) &trans        &trans             &trans     &kp C_PLAY_PAUSE &kp F7       &kp F8        &kp F9      &kp F10     &trans
     &trans     &kp LS(HOME) &kp LS(LEFT)  &kp LS(DOWN) &kp LS(RIGHT) &kp LS(END)   &trans             &trans     &kp K_VOL_UP     &kp F4       &kp F5        &kp F6      &kp F11     &trans
     &trans     &trans       &trans        &trans       &trans        &kp C_MUTE    &trans             &trans     &kp K_VOL_DN     &kp F1       &kp F2        &kp F3      &kp F12     &trans
                             &trans        &trans       &trans        &trans        &trans             &trans     &trans           &kp SPACE    &trans        &trans
@@ -114,23 +104,11 @@
             label = "Media";
 
             bindings = <
-    &trans                                 &trans           &trans           &trans          &trans            &trans            &trans            &trans     &trans             &trans            &trans             &trans         &trans          &trans
-    &rgb_ug RGB_COLOR_HSB(0,0,100)         &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &trans            &trans            &trans            &trans     &trans             &bt BT_PRV        &bt BT_NXT         &trans         &trans          &trans
-    &rgb_ug RGB_COLOR_HSB(224,100,100)     &trans           &rgb_ug RGB_HUI  &rgb_ug RGB_SAI &rgb_ug RGB_BRI   &rgb_ug RGB_SPI   &trans            &trans     &bt BT_CLR         &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2   &bt BT_SEL 3    &trans
-    &rgb_ug RGB_COLOR_HSB(278,100,100)     &trans           &rgb_ug RGB_HUD  &rgb_ug RGB_SAD &rgb_ug RGB_BRD   &rgb_ug RGB_SPD   &trans            &trans     &ext_power EP_TOG  &ext_power EP_ON  &ext_power EP_OFF  &out OUT_USB   &out OUT_BLE    &trans
-                                                            &trans           &trans          &trans            &trans            &trans            &trans     &trans             &trans            &trans             &trans
-            >;
-        };
-
-        mouse_layer {
-            label = "Mouse";
-
-            bindings = <
-    &trans     &trans      &trans      &trans      &trans      &trans        &trans             &trans          &trans      &trans      &trans      &trans      &trans      &trans
-    &trans     &bootloader &trans      &trans      &trans      &trans        &trans             &trans          &trans      &trans      &trans      &trans      &trans      &trans
-    &trans     &trans      &trans      &trans      &trans      &trans        &trans             &trans          &trans      &trans      &trans      &trans      &trans      &trans
-    &trans     &trans      &trans      &trans      &trans      &trans        &trans             &trans          &trans      &trans      &trans      &trans      &trans      &trans
-                           &trans      &trans      &trans      &trans        &trans             &trans          &trans      &trans      &trans      &trans
+    &trans     &trans      &trans         &trans       &trans        &trans        &trans             &trans     &trans             &trans            &trans             &trans         &trans          &trans
+    &trans     &trans      &trans         &trans       &trans        &trans        &trans             &trans     &trans             &bt BT_PRV        &bt BT_NXT         &trans         &trans          &trans
+    &trans     &trans      &trans         &trans       &trans        &trans        &trans             &trans     &bt BT_CLR         &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2   &bt BT_SEL 3    &trans
+    &trans     &trans      &trans         &trans       &trans        &trans        &trans             &trans     &ext_power EP_TOG  &ext_power EP_ON  &ext_power EP_OFF  &out OUT_USB   &out OUT_BLE    &trans
+                           &trans         &trans       &trans        &trans        &trans             &trans     &trans             &trans            &trans             &trans
             >;
         };
 

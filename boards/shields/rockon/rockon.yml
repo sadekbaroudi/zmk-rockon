@@ -4,6 +4,7 @@ name: rockon
 type: shield
 url: https://github.com/sadekbaroudi/rock-on/
 requires: [pro_micro]
+exposes:
+  - i2c_glidepoint
 features:
   - keys
-
